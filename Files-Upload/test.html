@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>project</title>
+    <link rel="stylesheet" type="text/css" href="css/antd.min.css">
+    <script type="text/javascript" src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/antd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.10.0/dist/av-min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/write.css">
+</head>
+<body>
+<div id="app">
+    <div id="id">
+        <template>
+            <a-upload-dragger
+              name="file"
+              :multiple="true"
+              action=""
+              @change="handleChange"
+            >
+              <p class="ant-upload-drag-icon">
+                <a-icon type="inbox" />
+              </p>
+              <p class="ant-upload-text">
+                Click or drag file to this area to upload
+              </p>
+              <p class="ant-upload-hint">
+                Support for a single or bulk upload. Strictly prohibit from uploading company data or other
+                band files
+              </p>
+            </a-upload-dragger>
+          </template>
+        
+    </div>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            visible: false
+        },
+        methods: {
+            handleChange(info) {
+                const avatarUpload = document.getElementById('avatar-upload');
+                if (avatarUpload.files.length) {
+                const localFile = avatarUpload.files[0];
+                const file = new AV.File('avatar.jpg', localFile);
+                console.log('666')
+                }
+            },
+        }
+    })
+  </script>
+</body>
+</html>
