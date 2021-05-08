@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Microsoft 365 的域所有权验证文件 - 放置在网站根目录中",
+  "Domain": "blackacloud.ma195cisce.org",
+  "Id": "06851acf-05f1-443a-8bff-59b696406ae6"
+}
